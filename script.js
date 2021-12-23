@@ -30,7 +30,7 @@ $(".time-block").each(function () {
   })
 
 //Save data to local storage when button clicked
-$(".saveBtn").on("click", function () {
+$(".saveButton").on("click", function () {
     console.log(this);
     var text = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
