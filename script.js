@@ -1,4 +1,4 @@
-
+$(document).ready(function() {
 //Display the current date and time
 $("#currentDay").text(moment().format("dddd, MMMM Do YYYY , h:mm a"));
 $("currentTime").text(moment().format("h:mm a"));
@@ -34,8 +34,12 @@ $(".saveButton").on("click", function () {
     console.log(this);
     var text = $(this).siblings(".description").val();
     var time = $(this).parent().attr("id");
- })
+  
+    // Set items in local storage
+    localStorage.setItem(time, text);
+  
 
 
+ });
 
-
+}
